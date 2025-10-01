@@ -1,0 +1,60 @@
+# Reading pref.tcl
+# Loading project lab2
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+project open C:/Users/Winston/Documents/GitHub/Digital-IC/lab1/lab1
+# Loading project lab1
+# Compile of FA.v was successful.
+# Compile of HA.v was successful.
+# Compile of RCA.v was successful.
+# Compile of testfixture.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 13:13:40 on Oct 01,2025
+# Loading sv_std.std
+# Loading work.testfixture
+# Loading work.HA
+# Loading work.FA
+# Loading work.RCA
+run -all
+# === Testing Half Adder ===
+# PASS: #0 data is correct
+# PASS: #1 data is correct
+# PASS: #2 data is correct
+# PASS: #3 data is correct
+# PASS: #4 data is correct
+# PASS: #5 data is correct
+# PASS: #6 data is correct
+# PASS: #7 data is correct
+# >>> [HA] TEST PASSED
+# 
+# === Testing Full Adder ===
+# PASS: #0 data is correct
+# PASS: #1 data is correct
+# PASS: #2 data is correct
+# PASS: #3 data is correct
+# PASS: #4 data is correct
+# PASS: #5 data is correct
+# PASS: #6 data is correct
+# PASS: #7 data is correct
+# >>> [FA] TEST PASSED
+# 
+# === Testing Ripple Carry Adder ===
+# PASS: #0 data is correct
+# PASS: #1 data is correct
+# PASS: #2 data is correct
+# PASS: #3 data is correct
+# PASS: #4 data is correct
+# PASS: #5 data is correct
+# PASS: #6 data is correct
+# PASS: #7 data is correct
+# PASS: #8 data is correct
+# PASS: #9 data is correct
+# >>> [RCA] TEST PASSED
+# 
+# 
+# ===================== ALL MODULE TESTS PASSED =====================
+# ** Note: $finish    : C:/Users/Winston/Documents/GitHub/Digital-IC/lab1/file/testfixture.sv(130)
+#    Time: 1578 ns  Iteration: 0  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/Winston/Documents/GitHub/Digital-IC/lab1/file/testfixture.sv line 130
