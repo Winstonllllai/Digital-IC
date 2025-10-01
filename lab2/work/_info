@@ -1,0 +1,132 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Winston/Documents/GitHub/Digital-IC/lab1
+vFA
+!s110 1759294087
+!i10b 1
+!s100 =nH7aQg3]YXdz6Uc;ej2J1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IOT^TVS>_[8ZOUWMiVaHmb2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Winston/Documents/GitHub/Digital-IC/lab2
+Z3 w1759293714
+8C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/FA.v
+FC:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/FA.v
+!i122 0
+L0 1 14
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1759294087.000000
+!s107 C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/FA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/FA.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@f@a
+vHA
+Z7 !s110 1759294088
+!i10b 1
+!s100 PgmzHnXWVYIlNiOC]:L`:0
+R0
+I=lhhg1NG1fC78M?26XI=J1
+R1
+R2
+R3
+8C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/HA.v
+FC:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/HA.v
+!i122 1
+L0 1 13
+R4
+r1
+!s85 0
+31
+Z8 !s108 1759294088.000000
+!s107 C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/HA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/HA.v|
+!i113 1
+R5
+R6
+n@h@a
+vMul_Mod
+R7
+!i10b 1
+!s100 WMI2f_0mzo6XmY6KC0:[P0
+R0
+I?[W^e`hhViQJ2mhG9h;Aa1
+R1
+R2
+R3
+8C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/Mul_Mod.v
+FC:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/Mul_Mod.v
+!i122 2
+L0 1 41
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/Mul_Mod.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/Mul_Mod.v|
+!i113 1
+R5
+R6
+n@mul_@mod
+vRCA
+R7
+!i10b 1
+!s100 Q=HYiA3<0NmH4Fz`YO?==1
+R0
+IZ[5LQLL2eXgW>fPZgbQZU2
+R1
+R2
+R3
+8C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/RCA.v
+FC:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/RCA.v
+!i122 3
+L0 1 35
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/RCA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/RCA.v|
+!i113 1
+R5
+R6
+n@r@c@a
+vtestfixture
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1759294089
+!i10b 1
+!s100 b2i7dgomZ;caRQEJSjJjE0
+R0
+Ib?11AFcRWbf?m0LD><8V82
+R1
+S1
+R2
+R3
+8C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/testfixture.sv
+FC:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/testfixture.sv
+!i122 4
+L0 3 63
+R4
+r1
+!s85 0
+31
+!s108 1759294089.000000
+!s107 C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/testfixture.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/testfixture.sv|
+!i113 1
+o-work work -sv
+R6

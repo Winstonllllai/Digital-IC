@@ -1,0 +1,39 @@
+# Load canceled
+# Compile of FA.v was successful.
+# Compile of HA.v was successful.
+# Compile of Mul_Mod.v was successful.
+# Compile of RCA.v was successful.
+# Compile of testfixture.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# Load canceled
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 12:48:57 on Oct 01,2025
+# Loading sv_std.std
+# Loading work.testfixture
+# Loading work.Mul_Mod
+# Loading work.RCA
+# Loading work.FA
+run -all
+# Begin testing full_modular_multiplier
+# Test 1: A=2125996, B=2235065 => Z=908655 [PASS]
+# Test 2: A=4874107, B=2121067 => Z=7210127 [PASS]
+# Test 3: A=2817966, B=408065 => Z=2757552 [PASS]
+# Test 4: A=7247692, B=3401214 => Z=5175090 [PASS]
+# Test 5: A=5295674, B=1532595 => Z=8085376 [PASS]
+# Test 6: A=2778196, B=7775964 => Z=4192923 [PASS]
+# Test 7: A=6849659, B=3769492 => Z=5242908 [PASS]
+# Test 8: A=8078964, B=3142723 => Z=6104497 [PASS]
+# Test 9: A=5499700, B=4593447 => Z=6168991 [PASS]
+# Test 10: A=7266683, B=8328230 => Z=4244363 [PASS]
+# === TEST SUMMARY ===
+# Total tests: 10
+# Passed     : 10
+# Failed     : 0
+# ====================
+# ** Note: $finish    : C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/testfixture.sv(62)
+#    Time: 10 ns  Iteration: 0  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/Winston/Documents/GitHub/Digital-IC/lab2/file/testfixture.sv line 62
+# End time: 12:49:27 on Oct 01,2025, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 5

@@ -1,0 +1,114 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vFA
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1759293875
+!i10b 1
+!s100 D0I1]8U3Q`EACLE4Wj8Y41
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEk50l6`@2e0Z0nCCNb;Tc2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Winston/Documents/GitHub/Digital-IC/lab1
+Z5 w1759293714
+8C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\FA.v
+FC:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\FA.v
+!i122 3
+L0 1 14
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1759293875.000000
+!s107 C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\RCA.v|C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\FA.v|C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\HA.v|C:/Users/Winston/Documents/GitHub/Digital-IC/lab1/file/testfixture.sv|
+Z8 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Winston/Documents/GitHub/Digital-IC/lab1/file/testfixture.sv|
+!i113 1
+Z9 o-work work -sv
+Z10 tCvgOpt 0
+n@f@a
+vHA
+R0
+R1
+!i10b 1
+!s100 zI8NglXR0b6GEcjGdQ=Bd3
+R2
+IFCkh5_SBMe>oVZlLdkDYP0
+R3
+S1
+R4
+R5
+8C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\HA.v
+FC:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\HA.v
+!i122 3
+L0 1 13
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\RCA.v|C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\FA.v|C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\HA.v|C:/Users/Winston/Documents/GitHub/Digital-IC/lab1/file/testfixture.sv|
+R8
+!i113 1
+R9
+R10
+n@h@a
+vRCA
+R0
+Z12 !s110 1759293876
+!i10b 1
+!s100 geUi]F:=eZdO]LlaYSUBk2
+R2
+I:Mli5>e_fkJi>Y0Gblz@M3
+R3
+S1
+R4
+R5
+8C:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\RCA.v
+FC:\Users\Winston\Documents\GitHub\Digital-IC\lab1\file\.\RCA.v
+!i122 3
+L0 1 35
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 1
+R9
+R10
+n@r@c@a
+vtestfixture
+R0
+R12
+!i10b 1
+!s100 `GdYdDm4m7ohFl8l>6E@11
+R2
+IYV6OS308k3hgzX>fJ[]3h3
+R3
+S1
+R4
+R5
+8C:/Users/Winston/Documents/GitHub/Digital-IC/lab1/file/testfixture.sv
+FC:/Users/Winston/Documents/GitHub/Digital-IC/lab1/file/testfixture.sv
+!i122 3
+L0 8 126
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 1
+R9
+R10
