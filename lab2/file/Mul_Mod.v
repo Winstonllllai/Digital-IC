@@ -1,3 +1,7 @@
+`include "./FA.v"
+`include "./HA.v"
+`include "./RCA.v"
+
 module Mul_Mod (
     input  [22:0] A,
     input  [22:0] B,

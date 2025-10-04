@@ -1,33 +1,25 @@
-module RCA#(
-	parameter X_WIDTH = 4,
-	parameter Y_WIDTH = 4,
-	parameter S_WIDTH = 4
-)(
-	input  [X_WIDTH-1:0]   x,
-	input  [Y_WIDTH-1:0]   y,
+module RCA(
+	input  [3:0]   x,
+	input  [3:0]   y,
 	input 		c_in,
-	output [S_WIDTH-1:0]   s,
+	output [3:0]   s,
 	output     c_out
 );
 /*
 	Write Your Design Here ~
 */
-wire [S_WIDTH:0] carry;
-wire [S_WIDTH-1:0] padded_x;
-wire [S_WIDTH-1:0] padded_y;
-assign padded_x = {{S_WIDTH-X_WIDTH{1'b0}}, x};
-assign padded_y = {{S_WIDTH-Y_WIDTH{1'b0}}, y};
+wire [4:0] carry;
 assign carry[0] = c_in;
-assign c_out = carry[S_WIDTH];
+assign c_out = carry[4];
 genvar i;
 
 generate
-	for(i=0;i<S_WIDTH;i=i+1) begin: adder_block
+	for(i=0; i<4; i=i+1) begin: full_adder
 		FA adder(
-			.x(padded_x[i]),
-			.y(padded_y[i]),
-			.c_in(carry[i]),
-			.s(s[i]),
+			.x    (x[i]),
+			.y    (y[i]),
+			.c_in (carry[i]),
+			.s    (s[i]),
 			.c_out(carry[i+1])
 		);
 	end
