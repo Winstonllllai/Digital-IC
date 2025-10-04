@@ -9,7 +9,19 @@ module FA(
 /*
 	Write Your Design Here ~
 */
-assign {c_out, s} = x + y + c_in;
-
+wire s1, c_out1, c_out2;
+HA adder1(
+	.x(x),
+	.y(y),
+	.s(s1),
+	.c(c_out1)
+);
+HA adder2(
+	.x(c_in),
+	.y(s1),
+	.s(s),
+	.c(c_out2)
+);
+assign c_out = c_out1 | c_out2;
 endmodule
 
