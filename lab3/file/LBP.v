@@ -25,22 +25,31 @@ module LBP (
             WRITE_GRAY  = 3'b011, 
             WRITE_LBP   = 3'b100, 
             FINISH      = 3'b101;
+
     reg [7:0] gray_mem [0:16383];
     reg [2:0] state, next_state;
     reg [13:0] gray_counter;
     reg [6:0] lbp_row, lbp_col;
+
     wire gray_enable, lbp_enable;
     wire [13:0] lbp_counter;
+    wire [7:0] gray_out;
+    wire [7:0] lbp_out;
 
     assign RGB_req = (state == GRAY_READ) ? 1'b1 : 1'b0;
     assign RGB_addr = (gray_counter < 16384) ? gray_counter : 14'd0;
+
+    assign gray_data = gray_out;
     assign gray_addr = gray_counter;
     assign gray_valid = (state == WRITE_GRAY) ? 1'b1 : 1'b0;
+    assign gray_enable = (state == WRITE_GRAY) ? 1'b1 : 1'b0;
+
     assign lbp_counter = (lbp_row << 7) + lbp_col;
+    assign lbp_data = lbp_out;
     assign lbp_addr = lbp_counter;
     assign lbp_valid = (state == WRITE_LBP) ? 1'b1 : 1'b0;
-    assign gray_enable = (state == WRITE_GRAY) ? 1'b1 : 1'b0;
     assign lbp_enable = (state == WRITE_LBP) ? 1'b1 : 1'b0;
+
     assign finish = (state == FINISH) ? 1'b1 : 1'b0;
 
 
@@ -54,7 +63,6 @@ module LBP (
             state <= next_state;
 
             if(state == WRITE_GRAY) begin
-                gray_mem[gray_counter] <= gray_data;
                 gray_counter <= gray_counter + 1;
             end
 
@@ -68,7 +76,11 @@ module LBP (
             end
         end
     end
-    
+    always @(negedge clk) begin
+        if(state == WRITE_GRAY) begin
+            gray_mem[gray_counter] <= gray_out;
+        end
+    end
 
     always @(*) begin
         case(state)
@@ -98,7 +110,7 @@ module LBP (
     rgb2gray u_rgb2gray (
         .enable(gray_enable),
         .rgb(RGB_data),
-        .gray(gray_data)
+        .gray(gray_out)
     );
     
     gray2lbp u_gray2lbp (
@@ -107,7 +119,7 @@ module LBP (
         .neighbors({gray_mem[lbp_counter + 129], gray_mem[lbp_counter + 128], gray_mem[lbp_counter + 127],
                     gray_mem[lbp_counter + 1],                                gray_mem[lbp_counter - 1],
                     gray_mem[lbp_counter - 127], gray_mem[lbp_counter - 128], gray_mem[lbp_counter - 129]}),
-        .lbp(lbp_data)
+        .lbp(lbp_out)
     );
 
 endmodule
