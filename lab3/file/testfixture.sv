@@ -9,6 +9,14 @@
 
 module testfixture;
 
+// =====================================================
+//  VCD DUMP ADDED
+initial begin
+    $dumpfile("test.vcd");
+    $dumpvars(0, testfixture);
+end
+// =====================================================
+
 parameter N   = 16384; // 128 x 128 pixel
 
 
