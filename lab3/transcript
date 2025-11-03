@@ -1,0 +1,108 @@
+# Compile of LBP.v was successful.
+# Compile of testfixture.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 16:21:40 on Nov 03,2025
+# Loading sv_std.std
+# Loading work.testfixture
+# Loading work.LBP
+# Loading work.rgb2gray
+# Loading work.gray2lbp
+# Loading work.lbp_mem
+# Loading work.gray_mem
+run -all
+# =====================================================
+#                 START GRAY SIMULATION                
+# =====================================================
+# GRAY Output pixel: 0 ~           0 are correct!
+# 
+# GRAY Output pixel: 0 ~        1000 are correct!
+# 
+# GRAY Output pixel: 0 ~        2000 are correct!
+# 
+# GRAY Output pixel: 0 ~        3000 are correct!
+# 
+# GRAY Output pixel: 0 ~        4000 are correct!
+# 
+# GRAY Output pixel: 0 ~        5000 are correct!
+# 
+# GRAY Output pixel: 0 ~        6000 are correct!
+# 
+# GRAY Output pixel: 0 ~        7000 are correct!
+# 
+# GRAY Output pixel: 0 ~        8000 are correct!
+# 
+# GRAY Output pixel: 0 ~        9000 are correct!
+# 
+# GRAY Output pixel: 0 ~       10000 are correct!
+# 
+# GRAY Output pixel: 0 ~       11000 are correct!
+# 
+# GRAY Output pixel: 0 ~       12000 are correct!
+# 
+# GRAY Output pixel: 0 ~       13000 are correct!
+# 
+# GRAY Output pixel: 0 ~       14000 are correct!
+# 
+# GRAY Output pixel: 0 ~       15000 are correct!
+# 
+# GRAY Output pixel: 0 ~       16000 are correct!
+# 
+# GRAY Output pixel: 0 ~       16383 are correct!
+# 
+# =====================================================
+#                  START LBP SIMULATION                
+# =====================================================
+# LBP Output pixel: 0 ~           0 are correct!
+# 
+# LBP Output pixel: 0 ~        1000 are correct!
+# 
+# LBP Output pixel: 0 ~        2000 are correct!
+# 
+# LBP Output pixel: 0 ~        3000 are correct!
+# 
+# LBP Output pixel: 0 ~        4000 are correct!
+# 
+# LBP Output pixel: 0 ~        5000 are correct!
+# 
+# LBP Output pixel: 0 ~        6000 are correct!
+# 
+# LBP Output pixel: 0 ~        7000 are correct!
+# 
+# LBP Output pixel: 0 ~        8000 are correct!
+# 
+# LBP Output pixel: 0 ~        9000 are correct!
+# 
+# LBP Output pixel: 0 ~       10000 are correct!
+# 
+# LBP Output pixel: 0 ~       11000 are correct!
+# 
+# LBP Output pixel: 0 ~       12000 are correct!
+# 
+# LBP Output pixel: 0 ~       13000 are correct!
+# 
+# LBP Output pixel: 0 ~       14000 are correct!
+# 
+# LBP Output pixel: 0 ~       15000 are correct!
+# 
+# LBP Output pixel: 0 ~       16000 are correct!
+# 
+# LBP Output pixel: 0 ~       16383 are correct!
+# 
+# -----------------------------------------------------
+# 
+# Congratulations! GRAY data have been generated successfully!
+# 
+# -------------------------PASS------------------------
+# 
+# Congratulations! LBP data have been generated successfully!
+# 
+# -------------------------PASS------------------------
+# 
+# ** Note: $finish    : C:/Users/Winston/Documents/GitHub/Digital-IC/lab3/file/testfixture.sv(168)
+#    Time: 645280 ns  Iteration: 0  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/Winston/Documents/GitHub/Digital-IC/lab3/file/testfixture.sv line 168
+# End time: 16:25:32 on Nov 03,2025, Elapsed time: 0:03:52
+# Errors: 0, Warnings: 2

@@ -1,1 +1,6 @@
 *.pdf
+*test
+*test.vcd
+*.mpf
+*.mti
+*/work
