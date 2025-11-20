@@ -1,0 +1,149 @@
+# Compile of FIFO_sync.v was successful.
+# Compile of FourBankFIFO.v was successful.
+# Compile of testfixture.sv was successful.
+# Compile of testfixture_bank.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 14:57:44 on Nov 20,2025
+# Loading sv_std.std
+# Loading work.testfixture
+# Loading work.FIFO_sync
+# Loading work.FIFO_mem
+# Loading work.FIFO_wr_ctrl
+# Loading work.FIFO_rd_ctrl
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 10, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /testfixture/dut File: C:/Users/Winston/Documents/GitHub/Digital-IC/lab4/file/testfixture.sv Line: 31
+# ** Warning: (vsim-3722) C:/Users/Winston/Documents/GitHub/Digital-IC/lab4/file/testfixture.sv(31): [TFMPC] - Missing connection for port 'wr_p'.
+# ** Warning: (vsim-3722) C:/Users/Winston/Documents/GitHub/Digital-IC/lab4/file/testfixture.sv(31): [TFMPC] - Missing connection for port 'rd_p'.
+run -all
+# =======================================================
+# ==                Simulation Start !!                ==
+# =======================================================
+# =======================================================
+# ==             Case 1: Fill FIFO exactly             ==
+# =======================================================
+# FIFO[0] data : 1
+# FIFO[1] data : 2
+# FIFO[2] data : 3
+# FIFO[3] data : 4
+# FIFO[4] data : 5
+# FIFO[5] data : 6
+# FIFO[6] data : 7
+# FIFO[7] data : 8
+# FIFO[8] data : 9
+# FIFO[9] data : a
+# FIFO[10] data : b
+# FIFO[11] data : c
+# FIFO[12] data : d
+# FIFO[13] data : e
+# FIFO[14] data : f
+# FIFO[15] data : 10
+# FIFO[16] data : 11
+# FIFO[17] data : 12
+# FIFO[18] data : 13
+# FIFO[19] data : 14
+# FIFO[20] data : 15
+# FIFO[21] data : 16
+# FIFO[22] data : 17
+# FIFO[23] data : 18
+# FIFO[24] data : 19
+# FIFO[25] data : 1a
+# FIFO[26] data : 1b
+# FIFO[27] data : 1c
+# FIFO[28] data : 1d
+# FIFO[29] data : 1e
+# FIFO[30] data : 1f
+# FIFO[31] data : 20
+# =======================================================
+# ==                Congratulations !!                 ==
+# ==            Case 1 Simulation PASS !!              ==
+# =======================================================
+# =======================================================
+# ==                 Case 2: Overflow                  ==
+# =======================================================
+# FIFO[0] data : 1
+# FIFO[1] data : 2
+# FIFO[2] data : 3
+# FIFO[3] data : 4
+# FIFO[4] data : 5
+# FIFO[5] data : 6
+# FIFO[6] data : 7
+# FIFO[7] data : 8
+# FIFO[8] data : 9
+# FIFO[9] data : a
+# FIFO[10] data : b
+# FIFO[11] data : c
+# FIFO[12] data : d
+# FIFO[13] data : e
+# FIFO[14] data : f
+# FIFO[15] data : 10
+# FIFO[16] data : 11
+# FIFO[17] data : 12
+# FIFO[18] data : 13
+# FIFO[19] data : 14
+# FIFO[20] data : 15
+# FIFO[21] data : 16
+# FIFO[22] data : 17
+# FIFO[23] data : 18
+# FIFO[24] data : 19
+# FIFO[25] data : 1a
+# FIFO[26] data : 1b
+# FIFO[27] data : 1c
+# FIFO[28] data : 1d
+# FIFO[29] data : 1e
+# FIFO[30] data : 1f
+# FIFO[31] data : 20
+# =======================================================
+# ==                Congratulations !!                 ==
+# ==            Case 2 Simulation PASS !!              ==
+# =======================================================
+# =======================================================
+# ==                 Case 3: Underflow                 ==
+# =======================================================
+# FIFO[0] data : 1
+# FIFO[1] data : 2
+# FIFO[2] data : 3
+# FIFO[3] data : 4
+# FIFO[4] data : 5
+# FIFO[5] data : 6
+# FIFO[6] data : 7
+# FIFO[7] data : 8
+# FIFO[8] data : 9
+# FIFO[9] data : a
+# FIFO[10] data : b
+# FIFO[11] data : c
+# FIFO[12] data : d
+# FIFO[13] data : e
+# FIFO[14] data : f
+# FIFO[15] data : 10
+# FIFO[16] data : 11
+# FIFO[17] data : 12
+# FIFO[18] data : 13
+# FIFO[19] data : 14
+# FIFO[20] data : 15
+# FIFO[21] data : 16
+# FIFO[22] data : 17
+# FIFO[23] data : 18
+# FIFO[24] data : 19
+# FIFO[25] data : 1a
+# FIFO[26] data : 1b
+# FIFO[27] data : 1c
+# FIFO[28] data : 1d
+# FIFO[29] data : 1e
+# =======================================================
+# ==                Congratulations !!                 ==
+# ==            Case 3 Simulation PASS !!              ==
+# =======================================================
+# =======================================================
+#    ( \_._/ )                                          
+#    ( o ω o )          Congratulations !!               
+#  o-(       )-o        Simulation PASS !!               
+#      ''  ''                                            
+# =======================================================
+# ** Note: $finish    : C:/Users/Winston/Documents/GitHub/Digital-IC/lab4/file/testfixture.sv(280)
+#    Time: 2220 ns  Iteration: 1  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/Winston/Documents/GitHub/Digital-IC/lab4/file/testfixture.sv line 280
+# End time: 14:59:06 on Nov 20,2025, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 8

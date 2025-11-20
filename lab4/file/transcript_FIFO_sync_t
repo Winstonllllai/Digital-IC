@@ -1,0 +1,165 @@
+# Load canceled
+# Compile of lab4.vo was successful.
+# Compile of testfixture.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testfixture -L altera_ver -L cycloneive_ver -L altera_mf_ver -sdftyp /testfixture/dut=C:/Users/Winston/Desktop/file/lab4_v.sdo
+# vsim -gui work.testfixture -L altera_ver -L cycloneive_ver -L altera_mf_ver -sdftyp "/testfixture/dut=C:/Users/Winston/Desktop/file/lab4_v.sdo" 
+# Start time: 15:10:38 on Nov 20,2025
+# Loading sv_std.std
+# Loading work.testfixture
+# Loading work.FIFO_sync
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# SDF 2020.1 Compiler 2020.02 Feb 28 2020
+# 
+# Loading instances from C:/Users/Winston/Desktop/file/lab4_v.sdo
+# Loading instances from lab4_v.sdo
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 10, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /testfixture/dut File: C:/Users/Winston/Desktop/file/testfixture.sv Line: 31
+# ** Warning: (vsim-3722) C:/Users/Winston/Desktop/file/testfixture.sv(31): [TFMPC] - Missing connection for port 'wr_p'.
+# ** Warning: (vsim-3722) C:/Users/Winston/Desktop/file/testfixture.sv(31): [TFMPC] - Missing connection for port 'rd_p'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from C:/Users/Winston/Desktop/file/lab4_v.sdo
+# Loading timing data from lab4_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /testfixture File: C:/Users/Winston/Desktop/file/testfixture.sv
+run -all
+# =======================================================
+# ==                Simulation Start !!                ==
+# =======================================================
+# =======================================================
+# ==             Case 1: Fill FIFO exactly             ==
+# =======================================================
+# FIFO[0] data : 1
+# FIFO[1] data : 2
+# FIFO[2] data : 3
+# FIFO[3] data : 4
+# FIFO[4] data : 5
+# FIFO[5] data : 6
+# FIFO[6] data : 7
+# FIFO[7] data : 8
+# FIFO[8] data : 9
+# FIFO[9] data : a
+# FIFO[10] data : b
+# FIFO[11] data : c
+# FIFO[12] data : d
+# FIFO[13] data : e
+# FIFO[14] data : f
+# FIFO[15] data : 10
+# FIFO[16] data : 11
+# FIFO[17] data : 12
+# FIFO[18] data : 13
+# FIFO[19] data : 14
+# FIFO[20] data : 15
+# FIFO[21] data : 16
+# FIFO[22] data : 17
+# FIFO[23] data : 18
+# FIFO[24] data : 19
+# FIFO[25] data : 1a
+# FIFO[26] data : 1b
+# FIFO[27] data : 1c
+# FIFO[28] data : 1d
+# FIFO[29] data : 1e
+# FIFO[30] data : 1f
+# FIFO[31] data : 20
+# =======================================================
+# ==                Congratulations !!                 ==
+# ==            Case 1 Simulation PASS !!              ==
+# =======================================================
+# =======================================================
+# ==                 Case 2: Overflow                  ==
+# =======================================================
+# FIFO[0] data : 1
+# FIFO[1] data : 2
+# FIFO[2] data : 3
+# FIFO[3] data : 4
+# FIFO[4] data : 5
+# FIFO[5] data : 6
+# FIFO[6] data : 7
+# FIFO[7] data : 8
+# FIFO[8] data : 9
+# FIFO[9] data : a
+# FIFO[10] data : b
+# FIFO[11] data : c
+# FIFO[12] data : d
+# FIFO[13] data : e
+# FIFO[14] data : f
+# FIFO[15] data : 10
+# FIFO[16] data : 11
+# FIFO[17] data : 12
+# FIFO[18] data : 13
+# FIFO[19] data : 14
+# FIFO[20] data : 15
+# FIFO[21] data : 16
+# FIFO[22] data : 17
+# FIFO[23] data : 18
+# FIFO[24] data : 19
+# FIFO[25] data : 1a
+# FIFO[26] data : 1b
+# FIFO[27] data : 1c
+# FIFO[28] data : 1d
+# FIFO[29] data : 1e
+# FIFO[30] data : 1f
+# FIFO[31] data : 20
+# =======================================================
+# ==                Congratulations !!                 ==
+# ==            Case 2 Simulation PASS !!              ==
+# =======================================================
+# =======================================================
+# ==                 Case 3: Underflow                 ==
+# =======================================================
+# FIFO[0] data : 1
+# FIFO[1] data : 2
+# FIFO[2] data : 3
+# FIFO[3] data : 4
+# FIFO[4] data : 5
+# FIFO[5] data : 6
+# FIFO[6] data : 7
+# FIFO[7] data : 8
+# FIFO[8] data : 9
+# FIFO[9] data : a
+# FIFO[10] data : b
+# FIFO[11] data : c
+# FIFO[12] data : d
+# FIFO[13] data : e
+# FIFO[14] data : f
+# FIFO[15] data : 10
+# FIFO[16] data : 11
+# FIFO[17] data : 12
+# FIFO[18] data : 13
+# FIFO[19] data : 14
+# FIFO[20] data : 15
+# FIFO[21] data : 16
+# FIFO[22] data : 17
+# FIFO[23] data : 18
+# FIFO[24] data : 19
+# FIFO[25] data : 1a
+# FIFO[26] data : 1b
+# FIFO[27] data : 1c
+# FIFO[28] data : 1d
+# FIFO[29] data : 1e
+# =======================================================
+# ==                Congratulations !!                 ==
+# ==            Case 3 Simulation PASS !!              ==
+# =======================================================
+# =======================================================
+#    ( \_._/ )                                          
+#    ( o ω o )          Congratulations !!               
+#  o-(       )-o        Simulation PASS !!               
+#      ''  ''                                            
+# =======================================================
+# ** Note: $finish    : C:/Users/Winston/Desktop/file/testfixture.sv(280)
+#    Time: 2220 ns  Iteration: 1  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/Winston/Desktop/file/testfixture.sv line 280
+# End time: 15:11:05 on Nov 20,2025, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 11
