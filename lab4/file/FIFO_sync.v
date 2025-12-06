@@ -6,9 +6,7 @@ module FIFO_sync(
     input       [7:0] data_in ,
     output            full    ,
     output            empty   ,
-    output      [7:0] data_out,
-    output      [4:0] wr_p,
-    output      [4:0] rd_p
+    output      [7:0] data_out
 );
 
 /*
