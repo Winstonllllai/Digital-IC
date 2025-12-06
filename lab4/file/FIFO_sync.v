@@ -68,7 +68,7 @@ module FIFO_mem(
     assign wr_avail = !full && wr_en;
     assign rd_avail = !empty && rd_en;
 
-    always@(posedge clk)begin
+    always@(posedge clk or posedge rst)begin
         if(rst)begin
             data_count <= 6'd0;
         end
@@ -101,7 +101,7 @@ module FIFO_wr_ctrl(
     input             wr_en   ,
     output    reg [4:0] wr_ptr
 );
-    always@(posedge clk)begin
+    always@(posedge clk or posedge rst)begin
         if(rst)begin
             wr_ptr <= 5'd0;
         end
@@ -117,7 +117,7 @@ module FIFO_rd_ctrl(
     input             rd_en   ,
     output    reg [4:0] rd_ptr
 );
-    always@(posedge clk)begin
+    always@(posedge clk or posedge rst)begin
         if(rst)begin
             rd_ptr <= 5'd0;
         end

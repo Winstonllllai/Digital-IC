@@ -1,4 +1,4 @@
-`include "FIFO_sync.v"
+
 `timescale 1ns / 10ps
 
 module FourBankFIFO(
