@@ -13,6 +13,9 @@
 `define LOG_FILE        "./tb_NTT_log.txt"
 
 module testfixture;
+initial begin
+    $dumpfile("./tb_NTT.vcd");
+end
 
 // top interface
 logic             clk;

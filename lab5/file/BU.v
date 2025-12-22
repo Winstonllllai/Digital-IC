@@ -21,13 +21,14 @@ wire [24:0] s_2, s_4, s_5;
 wire [11:0] s_3;
 wire [34:0] c_1;
 wire [23:0] c_2;
+wire [23:0] Product_24;
 wire [22:0] Product;
 wire [23:0] sum_raw, sum_mod;
-wire [23:0] diff_pos, diff_neg;
+wire [23:0] diff_raw, diff_adj;
 
 
 assign Q = 24'd8380417;
-assign mul_1 = (TF * Y[22:17])<<17;
+assign mul_1 = (TF * Y[22:17]) << 17;
 assign mul_2 = TF * Y[16:0];
 RCA #(46, 40, 46)adder1(.x(mul_1), .y(mul_2), .c_in(1'b0), .s(s_1[45:0]), .c_out(s_1[46]));
 assign U = s_1[45:0];
@@ -41,14 +42,15 @@ assign W = V3[34:11];
 assign s_3 = W[23:13] - W[10:0];
 assign c_2 = {(W[0]^s_3[10]), s_3[9:0], W[12:0]};
 assign s_4 = U[23:0] - c_2[23:0];
-assign s_5 = s_4 - Q;
-assign Product = s_5[24] ? s_4[22:0] : s_5[22:0];
+assign s_5 = s_4[23:0] - Q;
+assign Product_24 = s_5[23] ? s_4[23:0] : s_5[23:0];
+assign Product = Product_24[22:0];
 assign sum_raw = {1'b0, X} + {1'b0, Product};
 assign sum_mod = sum_raw - Q;
 assign A = sum_mod[23] ? sum_raw[22:0] : sum_mod[22:0];
-assign diff_pos = {1'b0, X} - {1'b0, Product};
-assign diff_neg = ({1'b0, X} + Q) - {1'b0, Product};
-assign B = (X >= Product) ? diff_pos[22:0] : diff_neg[22:0];
+assign diff_raw = {1'b0, X} - {1'b0, Product};
+assign diff_adj = diff_raw + Q;
+assign B = diff_raw[23] ? diff_adj[22:0] : diff_raw[22:0];
 
 endmodule
 
