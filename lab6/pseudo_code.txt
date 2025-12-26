@@ -1,0 +1,109 @@
+// 儲存元件規劃
+Board [0:80]        // 4-bit 暫存器陣列: 儲存數獨盤面
+Fix_Mask [80]       // 1-bit: 標記該位址是否為題目給定的固定數字
+Row_Mask [0:8]      // 10-bit: 紀錄每一行已使用的數字 (Bit 1~9)
+Col_Mask [0:8]      // 10-bit: 紀錄每一列已使用的數字 (Bit 1~9)
+Block_Mask [0:8]    // 10-bit: 紀錄每個九宮格已使用的數字 (Bit 1~9)
+cur_x, cur_y        // 4-bit: 目前座標
+cur_ptr             // 7-bit = (cur_y * 9) + cur_x
+rom_step            // 1-bit: 控制 ROM 讀取的兩階段 (Address -> Data)
+
+FUNCTION Reset:
+    cur_x = 0, cur_y = 0
+    FOR i = 0 TO 8:
+        Row_Mask[i] = 0
+        Col_Mask[i] = 0
+        Block_Mask[i] = 0
+    rom_step = 0
+    STATE = INIT
+
+FUNCTION State_INIT:
+    IF rom_step == 0:
+        # 第一階段：送出地址 (ROM_A = cur_ptr)
+        rom_step = 1
+    ELSE:
+        # 第二階段：讀取數據並寫入
+        val = ROM_Q
+        IF val != 0:
+            Board[cur_ptr] = val
+            Fix_Mask[cur_ptr] = 1
+            # 更新 Mask (Row, Col, Block)
+            Update_Masks(cur_y, cur_x, cur_box, val, SET)
+        ELSE:
+            Board[cur_ptr] = 0
+            Fix_Mask[cur_ptr] = 0
+            
+        # 移動到下一格
+        Increment_Coord(cur_x, cur_y)
+        rom_step = 0
+        
+        # 結束條件：讀完最後一格 (8,8) 且 rom_step 完成
+        IF prev_x == 8 AND prev_y == 8:
+            NEXT_STATE = SEARCH
+
+FUNCTION State_SEARCH:
+    # 檢查是否完成所有格子 (利用 cur_y 溢位判斷，程式中是用 cur_y == 9)
+    IF cur_y == 9:
+        NEXT_STATE = WRITE
+        
+    ELSE IF Fix_Mask[cur_ptr] == 1:
+        # 如果是固定數字，根據 backtracking 狀態決定移動方向
+        IF backtracking == TRUE:
+            Decrement_Coord()
+        ELSE:
+            Increment_Coord()
+            
+    ELSE:
+        # 空白格，進入嘗試狀態
+        NEXT_STATE = TRY
+
+FUNCTION State_TRY:
+    # 尋找可用數字
+    used = Row_Mask[r] | Col_Mask[c] | Block_Mask[b]
+    available = ~used
+    
+    # 搜尋比目前 Board[cur_ptr] *大* 的最小可用數字
+    # 注意：要是嚴格大於 (>) 避免無窮迴圈
+    find_val = 15 (default invalid)
+    FOR i = 9 DOWNTO 1:
+        IF available[i] == 1 AND i > Board[cur_ptr]:
+            find_val = i
+            
+    IF find_val <= 9:
+        # 找到可用數字 -> 更新 Mask 並前進
+        Update_Masks(..., Board[cur_ptr], CLEAR) # 先清除舊的(若有)
+        Board[cur_ptr] = find_val
+        Update_Masks(..., find_val, SET)
+        
+        backtracking = FALSE
+        Increment_Coord()
+        NEXT_STATE = SEARCH
+    ELSE:
+        # 無可用數字 -> 進入回溯
+        NEXT_STATE = BACKTRACK
+
+FUNCTION State_BACKTRACK:
+    # 清除當前格子的數字與 Mask 紀錄
+    Update_Masks(..., Board[cur_ptr], CLEAR)
+    Board[cur_ptr] = 0
+    
+    # 設定回溯旗標，往回退一格
+    backtracking = TRUE
+    Decrement_Coord()
+    NEXT_STATE = SEARCH
+
+FUNCTION State_WRITE:
+    # 依序輸出結果到 RAM
+    IF cur_ptr <= 80:
+        RAM_ceb = 1
+        RAM_web = 0
+        RAM_A = cur_ptr
+        RAM_D = Board[cur_ptr]
+        Increment_Coord()
+    ELSE:
+        # 輸出完成
+        cur_x = 0, cur_y = 0
+        NEXT_STATE = DONE
+
+FUNCTION State_DONE:
+    done = 1
