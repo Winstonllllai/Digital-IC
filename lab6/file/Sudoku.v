@@ -112,6 +112,7 @@ module Sudoku(
 				block_mask[i] <= 0;
 			end
 			rom_step <= 1'b0;
+			backtracking <= 1'b0;
 		end
 		else begin
 			case(state)
